@@ -13,7 +13,7 @@ Bundle 'gmarik/vundle'
 "------------------
 Bundle 'mattn/emmet-vim'
 Bundle 'Raimondi/delimitMate'
-Bundle 'ervandew/supertab'
+" Bundle 'ervandew/supertab'
 Bundle 'Valloric/YouCompleteMe'
 " snippets
 Bundle 'SirVer/ultisnips'
@@ -46,6 +46,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'fholgado/minibufexpl.vim'
+Bundle 'ivanov/vim-ipython'
 
 "-------------
 " Other Utils
