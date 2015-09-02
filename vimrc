@@ -166,24 +166,10 @@ let g:user_emmet_expandabbr_key='<C-j>'
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType c setlocal omnifunc=ccomplete#Complete
 
 " YCM
-" let g:ycm_key_list_select_completion = ['<C-TAB>','<Down>']
-" let g:ycm_key_list_previous_completion = ['<C-S-TAB>','<Up>'] 
-
-" SuperTab
-" let g:SuperTabDefaultCompletionType = '<C-Tab>'
-" make YCM compatible with UltiSnips (using supertab)
-" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-" let g:SuperTabDefaultCompletionType = '<C-n>'
-
-" better key bindings for UltiSnipsExpandTrigger
-" let g:UltiSnipsExpandTrigger = "<tab>"
-" let g:UltiSnipsJumpForwardTrigger = "<tab>"
-" let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 let g:UltiSnipsExpandTrigger       ="<c-tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
