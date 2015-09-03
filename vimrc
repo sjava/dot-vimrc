@@ -210,6 +210,9 @@ inoremap <return> <C-R>=Ulti_ExpandOrEnter()<CR>
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
+" vim-autoformat
+au BufWrite * :Autoformat
+
 " Keybindings for plugin toggle
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
