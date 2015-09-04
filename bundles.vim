@@ -48,6 +48,7 @@ Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'ivanov/vim-ipython'
 Bundle 'Chiel92/vim-autoformat'
+Bundle 'vim-scripts/python_match.vim'
 
 "-------------
 " Other Utils
