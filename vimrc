@@ -201,68 +201,68 @@ function! Ulti_ExpandOrEnter()
         return ''
     else
         return "\<return>"
-    endfunction
+endfunction
 
-    " Set <space> as primary trigger
-    inoremap <return> <C-R>=Ulti_ExpandOrEnter()<CR>
+" Set <space> as primary trigger
+inoremap <return> <C-R>=Ulti_ExpandOrEnter()<CR>
 
-    " ctrlp
-    set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
-    let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+" ctrlp
+set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
-    " vim-autoformat
-    au BufWrite * :Autoformat
+" vim-autoformat
+au BufWrite *.py :Autoformat
 
-    " Keybindings for plugin toggle
-    nnoremap <F2> :set invpaste paste?<CR>
-    set pastetoggle=<F2>
-    nmap <F5> :TagbarToggle<cr>
-    nmap <F6> :NERDTreeToggle<cr>
-    nmap <F3> :GundoToggle<cr>
-    nmap <F4> :IndentGuidesToggle<cr>
-    nnoremap <leader>a :Ack
-    nnoremap <leader>v V`]
+" Keybindings for plugin toggle
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+nmap <F5> :TagbarToggle<cr>
+nmap <F6> :NERDTreeToggle<cr>
+nmap <F3> :GundoToggle<cr>
+nmap <F4> :IndentGuidesToggle<cr>
+nnoremap <leader>a :Ack
+nnoremap <leader>v V`]
 
-    "------------------
-    " Useful Functions
-    "------------------
-    " easier navigation between split windows
-    nnoremap <c-j> <c-w>j
-    nnoremap <c-k> <c-w>k
-    nnoremap <c-h> <c-w>h
-    nnoremap <c-l> <c-w>l
+"------------------
+" Useful Functions
+"------------------
+" easier navigation between split windows
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
-    " When editing a file, always jump to the last cursor position
-    autocmd BufReadPost *
-                \ if ! exists("g:leave_my_cursor_position_alone") |
-                \     if line("'\"") > 0 && line ("'\"") <= line("$") |
-                \         exe "normal g'\"" |
-                \     endif |
-                \ endif
+" When editing a file, always jump to the last cursor position
+autocmd BufReadPost *
+            \ if ! exists("g:leave_my_cursor_position_alone") |
+            \     if line("'\"") > 0 && line ("'\"") <= line("$") |
+            \         exe "normal g'\"" |
+            \     endif |
+            \ endif
 
-    " w!! to sudo & write a file
-    cmap w!! %!sudo tee >/dev/null %
+" w!! to sudo & write a file
+cmap w!! %!sudo tee >/dev/null %
 
-    " Quickly edit/reload the vimrc file
-    nmap <silent> <leader>ev :e $MYVIMRC<CR>
-    nmap <silent> <leader>sv :so $MYVIMRC<CR>
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 
-    " eggcache vim
-    nnoremap ; :
-    :command W w
-    :command WQ wq
-    :command Wq wq
-    :command Q q
-    :command Qa qa
-    :command QA qa
+" eggcache vim
+nnoremap ; :
+:command W w
+:command WQ wq
+:command Wq wq
+:command Q q
+:command Qa qa
+:command QA qa
 
-    " for macvim
-    if has("gui_running")
-        set go=aAce  " remove toolbar
-        "set transparency=30
-        set guifont=UbuntuMono\ 13
-        set showtabline=2
-        set columns=140
-        set lines=40
-    endif
+" for macvim
+if has("gui_running")
+    set go=aAce  " remove toolbar
+    "set transparency=30
+    set guifont=UbuntuMono\ 13
+    set showtabline=2
+    set columns=140
+    set lines=40
+endif
