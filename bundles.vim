@@ -47,12 +47,15 @@ Bundle 'scrooloose/syntastic'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'ivanov/vim-ipython'
+Bundle 'Chiel92/vim-autoformat'
+Bundle 'vim-scripts/python_match.vim'
 
 "-------------
 " Other Utils
 "-------------
 " Bundle 'humiaozuzu/fcitx-status'
 Bundle 'nvie/vim-togglemouse'
+Bundle 'jmcantrell/vim-virtualenv'
 
 "----------------------------------------
 " Syntax/Indent for language enhancement
