@@ -55,7 +55,6 @@ Bundle 'vim-scripts/python_match.vim'
 "-------------
 " Bundle 'humiaozuzu/fcitx-status'
 Bundle 'nvie/vim-togglemouse'
-Bundle 'jmcantrell/vim-virtualenv'
 
 "----------------------------------------
 " Syntax/Indent for language enhancement
