@@ -170,7 +170,7 @@ let g:user_emmet_expandabbr_key='<C-j>'
 " autocmd FileType c setlocal omnifunc=ccomplete#Complete
 
 " YCM
-
+let g:ycm_autoclose_preview_window_after_completion = 1
 let g:UltiSnipsExpandTrigger       ="<c-tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
@@ -261,7 +261,7 @@ nnoremap ; :
 if has("gui_running")
     set go=aAce  " remove toolbar
     "set transparency=30
-    set guifont=UbuntuMono\ 13
+    set guifont=UbuntuMono\ 12
     set showtabline=2
     set columns=140
     set lines=40
