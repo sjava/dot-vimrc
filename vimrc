@@ -16,7 +16,8 @@ let mapleader=","
 "--------
 " color scheme
 set background=dark
-color solarized
+" color solarized
+color Tomorrow
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
