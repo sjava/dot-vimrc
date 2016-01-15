@@ -16,7 +16,6 @@ let mapleader=","
 "--------
 " color scheme
 set background=dark
-" color solarized
 color Tomorrow-Night
 
 " highlight current line
@@ -163,12 +162,6 @@ let g:user_emmet_expandabbr_key='<C-j>'
 " powerline
 "let g:Powerline_symbols = 'fancy'
 
-" Enable omni completion.
-" autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-" autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-" autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-" autocmd FileType c setlocal omnifunc=ccomplete#Complete
 
 
 " ctrlp
@@ -181,7 +174,7 @@ au BufWrite *.py :Autoformat
 " Keybindings for plugin toggle
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
-nmap <F5> :TagbarToggle<cr>
+nmap <C-S-t> :TagbarToggle<cr>
 nmap <F6> :NERDTreeToggle<cr>
 nmap <F3> :GundoToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
@@ -226,11 +219,14 @@ nnoremap ; :
 if has("gui_running")
     set go=aAce  " remove toolbar
     "set transparency=30
-    set guifont=UbuntuMono\ 12
+    " set guifont=UbuntuMono\ 12
+    set guifont=Source\ Code\ Pro\ 11
     set showtabline=2
     set columns=140
     set lines=40
 endif
+let g:formatdef_autopep8 = '"autopep8 - --range ".a:firstline." ".a:lastline." "."--max-line-length=72"'
 
 let g:jedi#force_py_version = 3
-
+let g:UltiSnipsUsePythonVersion = 3
+let g:UltiSnipsRemoveSelectModeMappings = 0
