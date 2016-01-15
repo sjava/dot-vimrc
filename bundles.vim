@@ -13,8 +13,8 @@ Bundle 'gmarik/vundle'
 "------------------
 Bundle 'mattn/emmet-vim'
 Bundle 'Raimondi/delimitMate'
-" Bundle 'ervandew/supertab'
-Bundle 'Valloric/YouCompleteMe'
+Bundle 'davidhalter/jedi-vim'
+" Bundle 'Shougo/neocomplete.vim'
 " snippets
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
@@ -39,6 +39,8 @@ Bundle 'nathanaelkane/vim-indent-guides'
 "--------------
 Bundle 'scrooloose/nerdtree'
 Bundle 'majutsushi/tagbar'
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-easytags'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
@@ -56,7 +58,7 @@ Bundle 'vim-scripts/python_match.vim'
 "-------------
 " Bundle 'humiaozuzu/fcitx-status'
 Bundle 'nvie/vim-togglemouse'
-Bundle 'jmcantrell/vim-virtualenv'
+Bundle 'lambdalisue/vim-pyenv'
 
 "----------------------------------------
 " Syntax/Indent for language enhancement
