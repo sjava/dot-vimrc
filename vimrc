@@ -16,7 +16,6 @@ let mapleader=","
 "--------
 " color scheme
 set background=dark
-" color vividchalk
 color Tomorrow-Night
 
 " highlight current line
