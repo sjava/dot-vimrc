@@ -17,7 +17,7 @@ let mapleader=","
 " color scheme
 set background=dark
 " color solarized
-color Tomorrow
+color Tomorrow-Night
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
@@ -170,42 +170,6 @@ let g:user_emmet_expandabbr_key='<C-j>'
 " autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 " autocmd FileType c setlocal omnifunc=ccomplete#Complete
 
-" YCM
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:UltiSnipsExpandTrigger       ="<c-tab>"
-let g:UltiSnipsJumpForwardTrigger  = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
-" Enable tabbing through list of results
-function! g:UltiSnips_Complete()
-    call UltiSnips#ExpandSnippet()
-    if g:ulti_expand_res == 0
-        if pumvisible()
-            return "\<C-n>"
-        else
-            call UltiSnips#JumpForwards()
-            if g:ulti_jump_forwards_res == 0
-                return "\<TAB>"
-            endif
-        endif
-    endif
-    return ""
-endfunction
-
-au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-
-" Expand snippet or return
-let g:ulti_expand_res = 0
-function! Ulti_ExpandOrEnter()
-    call UltiSnips#ExpandSnippet()
-    if g:ulti_expand_res
-        return ''
-    else
-        return "\<return>"
-endfunction
-
-" Set <space> as primary trigger
-inoremap <return> <C-R>=Ulti_ExpandOrEnter()<CR>
 
 " ctrlp
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
@@ -268,14 +232,5 @@ if has("gui_running")
     set lines=40
 endif
 
-" Add the virtualenv's site-packages to vim path
-py << EOF
-import os.path
-import sys
-import vim
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    sys.path.insert(0, project_base_dir)
-    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
-EOF
+let g:jedi#force_py_version = 3
+

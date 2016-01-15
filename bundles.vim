@@ -14,9 +14,12 @@ Bundle 'gmarik/vundle'
 Bundle 'mattn/emmet-vim'
 Bundle 'Raimondi/delimitMate'
 " Bundle 'ervandew/supertab'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
+Bundle 'davidhalter/jedi-vim'
 " snippets
-Bundle 'SirVer/ultisnips'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 
 "-----------------
