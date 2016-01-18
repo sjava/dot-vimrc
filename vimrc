@@ -228,5 +228,4 @@ endif
 let g:formatdef_autopep8 = '"autopep8 - --range ".a:firstline." ".a:lastline." "."--max-line-length=72"'
 
 let g:jedi#force_py_version = 3
-let g:UltiSnipsUsePythonVersion = 3
-let g:UltiSnipsRemoveSelectModeMappings = 0
+let g:pyenv#auto_activate=0
