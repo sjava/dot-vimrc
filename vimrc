@@ -58,6 +58,7 @@ set shiftwidth=4    " indent width
 " set textwidth=79
 " set smarttab
 set expandtab       " expand tab to space
+inoremap # X#
 
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
@@ -105,7 +106,7 @@ let g:Tb_TabWrap = 1
 
 hi Tb_Normal guifg=white ctermfg=white
 hi Tb_Changed guifg=green ctermfg=green
-hi Tb_VisibleNormal ctermbg=252 ctermfg=235
+hi Tb_VisibleNormal ctermbg=252 ctermfg=red
 hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 
 " easy-motion
@@ -160,7 +161,7 @@ let NERDCompactSexyComs=1
 let g:user_emmet_expandabbr_key='<C-j>'
 
 " powerline
-"let g:Powerline_symbols = 'fancy'
+" let g:Powerline_symbols = 'fancy'
 
 
 
@@ -168,8 +169,6 @@ let g:user_emmet_expandabbr_key='<C-j>'
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
-" vim-autoformat
-au BufWrite *.py :Autoformat
 
 " Keybindings for plugin toggle
 nnoremap <F2> :set invpaste paste?<CR>
@@ -225,7 +224,6 @@ if has("gui_running")
     set columns=140
     set lines=40
 endif
-let g:formatdef_autopep8 = '"autopep8 - --range ".a:firstline." ".a:lastline." "."--max-line-length=72"'
 
 let g:jedi#force_py_version = 3
 let g:pyenv#auto_activate=0
