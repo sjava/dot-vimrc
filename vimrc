@@ -104,10 +104,10 @@ autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
 let g:Tb_MaxSize = 2
 let g:Tb_TabWrap = 1
 
-hi Tb_Normal guifg=white ctermfg=white
-hi Tb_Changed guifg=green ctermfg=green
-hi Tb_VisibleNormal ctermbg=252 ctermfg=red
-hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
+hi Tb_Normal guifg=white ctermfg=245
+hi Tb_Changed guifg=green ctermfg=167
+hi Tb_VisibleNormal ctermbg=235 ctermfg=117
+hi Tb_VisibleChanged guifg=green ctermbg=235 ctermfg=117
 
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
@@ -227,3 +227,5 @@ endif
 
 let g:jedi#force_py_version = 3
 let g:pyenv#auto_activate=0
+au BufWrite *.py :Autoformat
+let g:autoformat_autoindent = 0
