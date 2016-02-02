@@ -35,7 +35,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'sjl/gundo.vim'
 " Bundle 'godlygeek/tabular'
 Bundle 'nathanaelkane/vim-indent-guides'
-
+Bundle 'terryma/vim-multiple-cursors'
 "--------------
 " IDE features
 "--------------
@@ -55,6 +55,7 @@ Bundle 'vim-scripts/TabBar'
 Bundle 'ivanov/vim-ipython'
 Bundle 'Chiel92/vim-autoformat'
 Bundle 'vim-scripts/python_match.vim'
+Bundle 'tmhedberg/SimpylFold'
 
 "-------------
 " Other Utils

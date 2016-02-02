@@ -98,7 +98,7 @@ let g:rbpt_colorpairs = [
             \ ['red',         'firebrick3'],
             \ ]
 let g:rbpt_max = 16
-autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
+autocmd Syntax lisp,scheme,clojure,racket,python RainbowParenthesesToggle
 
 " tabbar
 let g:Tb_MaxSize = 2
@@ -229,3 +229,6 @@ let g:jedi#force_py_version = 3
 let g:pyenv#auto_activate=0
 au BufWrite *.py :Autoformat
 let g:autoformat_autoindent = 0
+
+autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
+autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
